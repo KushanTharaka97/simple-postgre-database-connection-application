@@ -21,8 +21,11 @@ public class DataInserting {
 
         stmt = conn.createStatement();
         String sql = "INSERT INTO test_table(id, name, country) " +
-                "VALUES(43, 'TestFromRemoteClass', 'testRemoteClassDbConnection');";
+                "VALUES(45, 'TestFromRemoteClass', 'testRemoteClassDbConnection');";
         stmt.executeUpdate(sql);
+        stmt.close();
+        conn.close();
+        System.out.println("INSERTED sucessfully");
 
 
 
