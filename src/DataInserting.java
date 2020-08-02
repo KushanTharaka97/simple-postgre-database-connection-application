@@ -8,14 +8,20 @@ public class DataInserting {
     public static void main(String args[] ) throws SQLException {
      //DbConnection inserting = new DbConnection();
        // System.out.println("JAVA Working");
-        DBConnectionReBuild.getConnection();
 
-        Connection conn = null;
+
+        Connection conn =  DBConnectionReBuild.getConnection();;
         Statement stmt = null;
+
+        if(conn == null){
+            System.out.println("conn Null");
+        }else {
+            System.out.println(" conn Not Null");
+        }
 
         stmt = conn.createStatement();
         String sql = "INSERT INTO test_table(id, name, country) " +
-                "VALUES(444, 'TestFromRemoteClass', 'testRemoteClassDbConnection');";
+                "VALUES(43, 'TestFromRemoteClass', 'testRemoteClassDbConnection');";
         stmt.executeUpdate(sql);
 
 
