@@ -8,6 +8,15 @@ public class DataInserting {
     public static void main(String args[] ) throws SQLException {
      //DbConnection inserting = new DbConnection();
        // System.out.println("JAVA Working");
+        /*
+        * Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your last name: ");
+        String lastName = scanner.nextLine();
+
+        System.out.print("Enter your first name: ");
+        String firstName = scanner.nextLine();
+* */
 
 
         Connection conn =  DBConnectionReBuild.getConnection();;
